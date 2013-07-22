@@ -5,14 +5,14 @@ $post_data = array(
     'To' => "<Your-Exotel-Landline-or-Mobile>",
     'CallerId' => "<Your-Exotel-virtual-number>",
     'Url' => "http://my.exotel.in/exoml/start/<flow_id>",
-    'TimeLimit' => "<time-in-seconds>",
-    'TimeOut' => "<time-in-seconds>",
+    'TimeLimit' => "<time-in-seconds>", //This is optional
+    'TimeOut' => "<time-in-seconds>", //This is also optional
     'CallType' => "trans"
-    'StatusCallback' => "<http//: your company URL>"
+    'StatusCallback' => "<http//: your company URL>" //This is also also optional
 );
  
-$exotel_sid = "xxxx"; // Your Exotel SID
-$exotel_token = "xxxx"; // Your exotel token
+$exotel_sid = "xxxx"; // Your Exotel SID - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
+$exotel_token = "xxxx"; // Your exotel token - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
  
 $url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Calls/connect";
  
