@@ -5,11 +5,11 @@ $post_data = array(
     // For promotional, this will be ignored by the SMS gateway
     'From'   => '8808891988',
     'To'    => '9052161119',
-    'Body'  => 'Reply 1/2.. to choose an appointment with Dr. Foo',
+    'Body'  => 'Reply 1/2 to 8088919888 to choose an appointment with Dr. Rajasekar', //Incase you are wondering who Dr. Rajasekhar is http://en.wikipedia.org/wiki/Dr._Rajasekhar_(actor)
 );
  
-$exotel_sid = "xxxx"; // Your Exotel SID
-$exotel_token = "xxxx"; // Your exotel token
+$exotel_sid = "xxxx"; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
+$exotel_token = "xxxx"; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
  
 $url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
  

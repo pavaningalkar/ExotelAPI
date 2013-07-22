@@ -9,8 +9,8 @@ $post_data = array(
     'CallType' => "promo" //Can be "trans" for transactional and "promo" for promotional content
 );
  
-$exotel_sid = "xxxx"; // Your Exotel SID
-$exotel_token = "xxxx"; // Your exotel token
+$exotel_sid = "xxxx"; // Your Exotel SID - Get it from here: http://my.exotel.in/settings/site#api-settings
+$exotel_token = "xxxx"; // Your exotel token - Get it from here: http://my.exotel.in/settings/site#api-settings
  
 $url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Calls/connect";
  
