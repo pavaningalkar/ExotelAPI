@@ -34,9 +34,12 @@ foreach($numbers as $number) {
 	
 	if($error) continue; 
 
-	$xml = simplexml_load_string($http_result); 
+	$xml = simplexml_load_string($http_result);
+	if(isset($xml->RestException->Status) && $xml->RestException->Status == 401) {
+		exit('Authentication failed');
+	} 
 	if($xml->Numbers->DND != "Yes") {
-		$dnd_free_numbers[] = $number;
+		$dnd_free_numbers[] = "$number\n";
 	}
 
 	sleep(3); //Just so we don't trigger Exotel server's spam buttons..
