@@ -11,7 +11,7 @@ $post_data = array(
 $exotel_sid = "xxxxx"; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
 $exotel_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
  
-$url = "http://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
+$url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_VERBOSE, 1);
