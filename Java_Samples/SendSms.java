@@ -15,12 +15,16 @@ public class SendUnicodeSms {
         ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
         postParameters.add(new BasicNameValuePair("From", "<ExoPhone>"));
         postParameters.add(new BasicNameValuePair("To", "<To number>"));
-        String body = "This strory never ends!!!";
+        String body = "Something cool and the God is unable to ";
         String out = new String(body.getBytes("UTF-8"), "ISO-8859-1");
         postParameters.add(new BasicNameValuePair("Body", out));
         String sid = "<sid>";
         String token = "<token>";
         String url = "https://"+sid + ":"+token+"@twilix.exotel.in/v1/Accounts/"+sid+"/Sms/send";
+        client.getCredentialsProvider().setCredentials(
+               new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
+               new UsernamePasswordCredentials(sid, token)
+           );
         HttpPost post = new HttpPost(url);
         try {
             post.setEntity(new UrlEncodedFormEntity(postParameters));
