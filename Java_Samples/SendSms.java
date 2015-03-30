@@ -15,7 +15,7 @@ public class SendUnicodeSms {
         ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
         postParameters.add(new BasicNameValuePair("From", "<ExoPhone>"));
         postParameters.add(new BasicNameValuePair("To", "<To number>"));
-        String body = "Something cool and the God is unable to ";
+        String body = "Magic. Do not touch.";
         String out = new String(body.getBytes("UTF-8"), "ISO-8859-1");
         postParameters.add(new BasicNameValuePair("Body", out));
         String sid = "<sid>";
