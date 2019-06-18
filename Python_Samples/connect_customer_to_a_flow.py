@@ -7,12 +7,12 @@ import requests
 from settings import sid, token
 
 
-def connect_customer(sid, token,
+def connect_customer(sid, key, token,
                      customer_no, exotel_no, callerid, url,
                      timelimit=None, timeout=None, calltype="trans",
                      callback_url=None):
     return requests.post('https://twilix.exotel.in/v1/Accounts/{sid}/Calls/connect.json'.format(sid=sid),
-        auth=(sid, token),
+        auth=(key, token),
         data={
             'From': customer_no,
             'To': exotel_no,
@@ -27,7 +27,7 @@ def connect_customer(sid, token,
 
 if __name__ == '__main__':
     r = connect_customer(
-        sid, token,
+        sid, key, token,
         customer_no="<Your-Customer's-Number>",
         exotel_no="<Your-Exotel-Landline-or-Mobile>",
         callerid="<Your-Exotel-virtual-number>",

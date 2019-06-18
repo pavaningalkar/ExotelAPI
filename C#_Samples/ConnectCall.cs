@@ -23,11 +23,13 @@ namespace ExotelSDK
 	public class ConnectCall
 	{
 		private string SID = null;
+		private string key = null;
 		private string token = null;
 
-		public ConnectCall (string SID, string token)
+		public ConnectCall (string SID, string key, string token)
 		{
 			this.SID = SID;
+			this.key = key;
 			this.token = token;
 		}
 
@@ -106,7 +108,7 @@ namespace ExotelSDK
 			};
 			string smsURL = "https://twilix.exotel.in/v1/Accounts/<Your Exotel Sid>/Calls/connect";
 			HttpWebRequest objRequest = (HttpWebRequest)WebRequest.Create (smsURL);
-			objRequest.Credentials = new NetworkCredential (this.SID, this.token);
+			objRequest.Credentials = new NetworkCredential (this.key, this.token);
 			objRequest.Method = "POST";
 			objRequest.ContentLength = postString.Length;
 			objRequest.ContentType = "application/x-www-form-urlencoded";
