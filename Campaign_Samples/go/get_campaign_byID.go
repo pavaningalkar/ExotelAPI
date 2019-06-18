@@ -8,13 +8,13 @@ import (
 )
 
 func main() {
-
-	// Please provide accountSid, authToken from your Exotel account
+	// Please provide accountSid, apiKey and apiToken from your Exotel account
 	accountSid := "<your Exotel Sid>"
-	authToken := "<your Exotel Token>"
+	apiKey := "<yout API Key>"
+	apiToken := "<your Exotel Token>"
 
 	// Encoding the accountSid and authToken, used in Authorization header
-	encoding := b64.StdEncoding.EncodeToString([]byte(accountSid + ":" + authToken))
+	encoding := b64.StdEncoding.EncodeToString([]byte(apiKey + ":" + apiToken))
 
 	url := "https://api.exotel.com/v2/accounts/" + accountSid + "/campaigns/<campaign SID>"
 

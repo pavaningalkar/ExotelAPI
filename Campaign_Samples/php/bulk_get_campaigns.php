@@ -2,8 +2,9 @@
 
 $curl = curl_init();
 $accountSid = "<your Exotel Sid>";
-$accountToken = "<your Exotel Token>";
-$encoding = base64_encode($accountSid .":". $accountToken);
+$apiKey = "<your API Key>";
+$apiToken = "<your API Token>";
+$encoding = base64_encode($apiKey .":". $apiToken);
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.exotel.com/v2/accounts/". $accountSid ."/campaigns?page_size=1&page=1",
   CURLOPT_RETURNTRANSFER => true,

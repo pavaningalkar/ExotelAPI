@@ -1,7 +1,8 @@
 import requests, base64, json
 accountSid = "<your Exotel SID>"
-accountToken = "<your Exotel token>"
-encoding = base64.b64encode(accountSid + ":" + accountToken)
+apiKey = "<your API key>"
+apiToken = "<your API token>"
+encoding = base64.b64encode(apiKey + ":" + apiToken)
 
 url = "https://api.exotel.com/v2/accounts/"+accountSid+"/campaigns"
 
