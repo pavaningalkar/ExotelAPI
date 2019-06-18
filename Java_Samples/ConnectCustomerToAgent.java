@@ -70,7 +70,7 @@ public class ConnectCustomerToAgent {
         //Replace "<Exotel SID>" and "<Exotel Token>" with your SID and Token
         client.getCredentialsProvider().setCredentials(
                                                        new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
-                                                       new UsernamePasswordCredentials("<Exotel SID>", "<Exotel Token>")
+                                                       new UsernamePasswordCredentials("<API Key>", "<API Token>")
                                                        );
         HttpPost post = new HttpPost("https://twilix.exotel.in/v1/Accounts/<Exotel SID>/Calls/connect");
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);

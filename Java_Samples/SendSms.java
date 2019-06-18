@@ -29,7 +29,7 @@ public class SendUnicodeSms {
         //Replace <sid> with your account sid
         String sid = "<sid>";
         //Replace <token> with your secret token
-        String authStr = sid + ":" + "<token>";
+        String authStr = "<api key>" + ":" + "<api token>";
         String url = "https://" + 
                         authStr + "@twilix.exotel.in/v1/Accounts/" + 
                         sid + "/Sms/send";

@@ -25,8 +25,9 @@ public class SendUnicodeSms {
         String out = new String(body.getBytes("UTF-8"), "ISO-8859-1");
         postParameters.add(new BasicNameValuePair("Body", out));
         String sid = "<sid>";
-        String token = "<token>";
-        String url = "https://"+sid + ":"+token+"@twilix.exotel.in/v1/Accounts/"+sid+"/Sms/send";
+        String key = "<api key>";
+        String token = "<api token>";
+        String url = "https://"+key + ":"+token+"@twilix.exotel.in/v1/Accounts/"+sid+"/Sms/send";
         HttpPost post = new HttpPost(url);
         try {
             post.setEntity(new UrlEncodedFormEntity(postParameters));
