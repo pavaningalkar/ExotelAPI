@@ -11,10 +11,12 @@ $post_data = array(
     'StatusCallback' => "<http//: your company URL>" //This is also also optional
 );
  
-$exotel_sid = "xxxx"; // Your Exotel SID - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
-$exotel_token = "xxxx"; // Your exotel token - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
+// You can get your $exotel_sid, $api_key and $api_token from: https://my.exotel.com/apisettings/site#api-credentials 
+$api_key = "xxxxx"; // Your `API KEY`.
+$api_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your `API TOKEN`
+$exotel_sid = "xxxxxxxxxxx" // Your `Account Sid`
  
-$url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Calls/connect";
+$url = "https://".$api_key.":".$api_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Calls/connect";
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_VERBOSE, 1);

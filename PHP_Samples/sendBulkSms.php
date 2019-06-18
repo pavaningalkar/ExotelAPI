@@ -8,10 +8,12 @@ $post_data = array(
     'Body'  => '<your sms text goes here>'
 );
  
-$exotel_sid = "xxxxx"; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
-$exotel_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
+// You can get your $exotel_sid, $api_key and $api_token from: https://my.exotel.com/apisettings/site#api-credentials 
+$api_key = "xxxxx"; // Your `API KEY`.
+$api_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your `API TOKEN`
+$exotel_sid = "xxxxxxxxxxx" // Your `Account Sid`
  
-$url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
+$url = "https://".$api_key.":".$api_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_VERBOSE, 1);

@@ -9,13 +9,15 @@
 $numbers = file("/path/to/my/numbers.txt");
 $dnd_free_numbers = array();
  
-$exotel_sid = "xxxx"; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
-$exotel_token = "xxxx"; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
+// You can get your $exotel_sid, $api_key and $api_token from: https://my.exotel.com/apisettings/site#api-credentials 
+$api_key = "xxxxx"; // Your `API KEY`.
+$api_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your `API TOKEN`
+$exotel_sid = "xxxxxxxxxxx" // Your `Account Sid`
 
 foreach($numbers as $number) {
 
 	$number = trim($number); 
-	$url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Numbers/$number";
+	$url = "https://".$api_key.":".$api_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Numbers/$number";
 
 	echo "Checking if $number is DND or not...\n";
  
